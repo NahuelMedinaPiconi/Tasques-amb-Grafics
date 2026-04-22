@@ -39,9 +39,29 @@
         <form>
             <label for="title">Títol:</label>
             <input id="title" type="text" max="20" name="title">
+
             <label for="description">Descriptció:</label>
             <textarea id="description" name="description" type="text" max="400"></textarea>
+
+            <label for="date">Data entrega:</label>
+            <input id="date" name="date" type="date">
+
+            <label for="category">Categoria:</label>
+            <select id="category" name="category"></select>
+
+            <label for="priority">Prioritat:</label>
+            <select id="priority" name="priority">
+                <option value="low">Baixa</option>
+                <option value="medium">Mediana</option>
+                <option value="high">Alta</option>
+            </select>
+
+            <button>Crear Tasca</button>
         </form>
     </main>
+    <footer>
+        <span>Nahuel Medina Piconi</span>
+        <p>nahuelmedina@paucasesnovescifp.org</p>
+    </footer>
 </body>
 </html>
