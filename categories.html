@@ -26,6 +26,40 @@
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
 </head>
 <body>
-    
+    <aside>
+        <h3>Menú</h3>
+        <ul>
+            <li>Llistat d'activitats</li>
+            <li>Crear Tasca</li>
+            <li>Gestio de Categories</li>
+        </ul>
+    </aside>
+    <main>
+        <h1>Gestió de Categoria</h1>
+        <form>
+            <label for="new_category">Nova Categoria:</label>
+            <input id="new_category" name="new_category" type="text" max="40" required>
+
+            <label for="color">Color de la Categoria:</label>
+            <input type="color" id="color" name="color" value="#000000"></input>
+
+            <button type="submit">Afegir Categoria</button>
+        </form>
+        <ul>
+            <li>
+                <div>
+                    <div>
+                        <span></span>
+                        <p>Estudis</p>
+                    </div>
+                    <button>Eliminar</button> 
+                </div>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        <span>Nahuel Medina Piconi</span>
+        <p>nahuelmedina@paucasesnovescifp.org</p>
+    </footer>
 </body>
 </html>
