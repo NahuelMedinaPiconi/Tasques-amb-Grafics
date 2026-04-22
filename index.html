@@ -26,6 +26,53 @@
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
 </head>
 <body>
-    
+    <aside>
+        <h3>Menú</h3>
+        <ul>
+            <li>Llistat d'activitats</li>
+            <li>Crear Tasca</li>
+            <li>Gestio de Categories</li>
+        </ul>
+    </aside>
+    <main>
+        <h1>Llista d'Activitats</h1>
+        <div>
+            <button>Crear Nova Tasca</button>
+            <form>
+                <select required>
+                    <option disabled selected>Selecciona un JSON...</option>
+                    <option value="file_1">activitats_001.json</option>
+                    <option value="file_2">activitats_002.json</option>
+                </select>
+            </form>
+        </div>
+        <section>
+            <h2>Tasques pendents</h2>
+            <article>
+                <div>
+                    <div>
+                        <p>Title</p>
+                        <span>Prioriti</span>
+                    </div>
+                    <span>Category</span>
+                    <p>Date</p>
+                    <div>
+                        <p>description</p>
+                        <div>
+                            <img src="i/graph.png">
+                            <img src="i/trash.png">
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section>
+            <h2>Tasques acabades</h2>
+        </section>
+    </main>
+    <footer>
+        <span>Nahuel Medina Piconi</span>
+        <p>nahuelmedina@paucasesnovescifp.org</p>
+    </footer>
 </body>
 </html>
