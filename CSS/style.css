@@ -3,6 +3,8 @@
      --secondary-blue: #2162ec;
      --main-text: #000000;
      --secondary-text: #ffffff;
+     --background: #f2f4f5;
+     --secondary-background: #ffffff;
 }
 
 body, html {
