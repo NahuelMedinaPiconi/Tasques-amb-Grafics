@@ -26,50 +26,52 @@
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
 </head>
 <body>
-    <aside>
-        <h3>Menú</h3>
-        <ul class="flex flex-column flex-sbetween">
-            <li><a>Llistat d'activitats</a></li>
-            <li><a>Crear Tasca</a></li>
-            <li><a>Gestio de Categories</a></li>
-        </ul>
-    </aside>
-    <main>
-        <h1>Llista d'Activitats</h1>
+    <main class="flex">
+        <aside>
+            <h3>Menú</h3>
+            <ul class="flex flex-column flex-sbetween">
+                <li><a>Llistat d'activitats</a></li>
+                <li><a>Crear Tasca</a></li>
+                <li><a>Gestio de Categories</a></li>
+            </ul>
+        </aside>
         <div>
-            <button>Crear Nova Tasca</button>
-            <form>
-                <select required>
-                    <option disabled selected>Selecciona un JSON...</option>
-                    <option value="file_1">activitats_001.json</option>
-                    <option value="file_2">activitats_002.json</option>
-                </select>
-                <button type="submit">Pujar</button>
-            </form>
-        </div>
-        <section>
-            <h2>Tasques pendents</h2>
-            <article>
-                <div>
+            <h1>Llista d'Activitats</h1>
+            <div>
+                <button>Crear Nova Tasca</button>
+                <form>
+                    <select required>
+                        <option disabled selected>Selecciona un JSON...</option>
+                        <option value="file_1">activitats_001.json</option>
+                        <option value="file_2">activitats_002.json</option>
+                    </select>
+                    <button type="submit">Pujar</button>
+                </form>
+            </div>
+            <section>
+                <h2>Tasques pendents</h2>
+                <article>
                     <div>
-                        <p>Title</p>
-                        <span>Prioriti</span>
-                    </div>
-                    <span>Category</span>
-                    <p>Date</p>
-                    <div>
-                        <p>description</p>
                         <div>
-                            <img src="i/graph.png">
-                            <img src="i/trash.png">
+                            <p>Title</p>
+                            <span>Prioriti</span>
+                        </div>
+                        <span>Category</span>
+                        <p>Date</p>
+                        <div>
+                            <p>description</p>
+                            <div>
+                                <img src="i/graph.png">
+                                <img src="i/trash.png">
+                            </div>
                         </div>
                     </div>
-                </div>
-            </article>
-        </section>
-        <section>
-            <h2>Tasques acabades</h2>
-        </section>
+                </article>
+            </section>
+            <section>
+                <h2>Tasques acabades</h2>
+            </section>
+        </div>
     </main>
     <footer>
         <span>Nahuel Medina Piconi</span>
