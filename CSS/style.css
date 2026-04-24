@@ -54,3 +54,7 @@ ul {
 li {
     width: 100%;
 }
+
+main:first-child div {
+    width: 100%;
+}
