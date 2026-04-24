@@ -28,6 +28,10 @@ body, html {
     justify-content: space-between;
 }
 
+.flex-column {
+    flex-direction: column;
+}
+
 aside {
     background-color: var(--primary-blue);
     color: var(--secondary-text);
