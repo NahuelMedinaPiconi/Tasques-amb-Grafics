@@ -24,6 +24,9 @@
 aside {
     background-color: var(--primary-blue);
     color: var(--secondary-text);
-    width: 15vw;
+    width: 17vw;
     height: 100vh;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
 }
