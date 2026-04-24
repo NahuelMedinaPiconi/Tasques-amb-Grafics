@@ -24,6 +24,10 @@ body, html {
     align-items: center;
 }
 
+.flex-hstart {
+    justify-content: start;
+}
+
 .flex-sbetween {
     justify-content: space-between;
 }
