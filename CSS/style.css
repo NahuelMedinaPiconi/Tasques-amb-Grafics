@@ -1,0 +1,18 @@
+:root {
+     --primary-blue: #3b82f6;
+     --secondary-blue: #2162ec;
+     --main-text: #000000;
+     --secondary-text: #ffffff;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-hcenter {
+    justify-content: center;
+}
+
+.flex-vcenter {
+    align-items: center;
+}
