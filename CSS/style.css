@@ -62,13 +62,15 @@ li {
     width: 100%;
 }
 
-main:first-child div {
+main > div {
     width: 100%;
 }
 
 h1 + div {
     background-color: var(--secondary-background);
     height: 10%;
+    margin-left: 1%;
+    width: 90%;
 }
 
 
