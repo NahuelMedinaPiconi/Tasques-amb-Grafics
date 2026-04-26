@@ -73,5 +73,18 @@ h1 + div {
     width: 90%;
 }
 
+button {
+    background-color: var(--secondary-blue);
+    color: var(--secondary-text);
+    border: 0;
+    border-radius: 5%;
+    padding: 1%;
+    height: 5vh;
+}
+
+.small_button {
+    width: 5vw;
+}
+
 
 
