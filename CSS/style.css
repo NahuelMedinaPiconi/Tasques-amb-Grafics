@@ -51,6 +51,10 @@ aside {
     min-width: fit-content;
 }
 
+section {
+    width: 95%;
+}
+
 ul {
     list-style-type: none;
     margin-top: 20%;
