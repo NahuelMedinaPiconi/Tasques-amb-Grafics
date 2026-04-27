@@ -67,6 +67,11 @@ li {
     width: 100%;
 }
 
+span {
+    width: fit-content;
+    padding: 1%;
+}
+
 main > div {
     width: 100%;
 }
@@ -107,5 +112,10 @@ select {
     border-radius: 5px;
 }
 
-
-
+.basic-task {
+    width: 45%;
+    font-size: 14px;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: #2162ec;
+}
