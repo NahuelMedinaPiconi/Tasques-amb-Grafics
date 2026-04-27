@@ -5,6 +5,7 @@
      --secondary-text: #ffffff;
      --background: #f2f4f5;
      --secondary-background: #ffffff;
+     --text-input: lightgrey;
 }
 
 body, html {
@@ -82,6 +83,16 @@ button {
     border-radius: 5%;
     padding: 1%;
     height: 5vh;
+}
+
+select {
+    background-color: var(--secondary-background);
+    border: 1px solid lightgray;
+    color: var(--text-input);
+    border-radius: 5%;
+    height: 5vh;
+    width: 15vw;
+    margin-right: 10%;
 }
 
 .small_button {
