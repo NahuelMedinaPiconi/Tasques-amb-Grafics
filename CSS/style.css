@@ -69,11 +69,13 @@ main > div {
 
 h1 + div {
     background-color: var(--secondary-background);
-    height: 10%;
+    height: 14%;
     margin-left: 1%;
     width: 90%;
     padding-left: 3%;
     padding-right: 3%;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
 }
 
 button {
