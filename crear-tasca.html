@@ -26,38 +26,39 @@
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
 </head>
 <body>
-    <aside>
+    <main class="flex">
+        <aside>
         <h3>Menú</h3>
-        <ul>
-            <li>Llistat d'activitats</li>
-            <li>Crear Tasca</li>
-            <li>Gestio de Categories</li>
-        </ul>
-    </aside>
-    <main>
-        <h1>Crear Nova Tasca</h1>
-        <form>
-            <label for="title">Títol:</label>
-            <input id="title" type="text" max="20" name="title" required>
+            <ul>
+                <li class="basic-radius"><a href="index.html" class="flex, flex-vcenter">Llistat d'activitats</a></li>
+                <li class="basic-radius"><a href="categories.html" class="flex flex-vcenter">Gestio de Categories</a></li>
+            </ul>
+        </aside>
+        <div class="flex flex-column flex-vcenter flex-hstart">
+            <h1>Crear Nova Tasca</h1>
+            <form>
+                <label for="title">Títol:</label>
+                <input id="title" type="text" max="20" name="title" required>
 
-            <label for="description">Descripció:</label>
-            <textarea id="description" name="description" type="text" max="400"></textarea>
+                <label for="description">Descripció:</label>
+                <textarea id="description" name="description" type="text" max="400"></textarea>
 
-            <label for="date">Data entrega:</label>
-            <input id="date" name="date" type="date">
+                <label for="date">Data entrega:</label>
+                <input id="date" name="date" type="date">
 
-            <label for="category">Categoria:</label>
-            <select id="category" name="category"></select>
+                <label for="category">Categoria:</label>
+                <select id="category" name="category"></select>
 
-            <label for="priority">Prioritat:</label>
-            <select id="priority" name="priority">
-                <option value="low">Baixa</option>
-                <option value="medium">Mediana</option>
-                <option value="high">Alta</option>
-            </select>
+                <label for="priority">Prioritat:</label>
+                <select id="priority" name="priority">
+                    <option value="low">Baixa</option>
+                    <option value="medium">Mediana</option>
+                    <option value="high">Alta</option>
+                </select>
 
-            <button type="submit">Crear Tasca</button>
-        </form>
+                <button type="submit">Crear Tasca</button>
+            </form>
+        </div>
     </main>
     <footer>
         <span>Nahuel Medina Piconi</span>
