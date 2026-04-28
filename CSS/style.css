@@ -110,6 +110,10 @@ input {
     height: 10vh;
 }
 
+.small-input {
+    height: 6vh;
+}
+
 textarea {
     max-width: 99%;
     border: 1px solid lightgray;
