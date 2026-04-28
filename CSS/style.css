@@ -129,13 +129,17 @@ h1 + div {
 }
 
 button {
-    background-color: var(--secondary-blue);
+    background-color: var(--primary-blue);
     color: var(--secondary-text);
     border: 0;
     border-radius: 3px;
     padding: 1%;
-    height: 5vh;
+    height: 6vh;
     width: fit-content;
+}
+
+.large-button {
+    height: 10vh;
 }
 
 select {
