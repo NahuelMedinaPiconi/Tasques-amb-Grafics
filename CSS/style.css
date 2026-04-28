@@ -32,6 +32,10 @@ body, html {
     justify-content: start;
 }
 
+.flex-hend {
+    justify-content: end;
+}
+
 .flex-sbetween {
     justify-content: space-between;
 }
@@ -39,6 +43,7 @@ body, html {
 .flex-column {
     flex-direction: column;
 }
+
 
 aside {
     background-color: var(--primary-blue);
@@ -159,4 +164,8 @@ select {
 
 .basic-shadow {
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.min-p {
+    padding: 1%;
 }
