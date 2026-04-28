@@ -100,9 +100,14 @@ label {
     font-weight: bold;
 }
 
+input {
+    border: 1px solid lightgray;
+    height: 10vh;
+}
+
 textarea {
-    min-height: 2vh;
     max-width: 99%;
+    border: 1px solid lightgray;
 }
 
 main > div {
