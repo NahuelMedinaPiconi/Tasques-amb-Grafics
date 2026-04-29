@@ -1,4 +1,4 @@
-export default class Tasca {
+export class Tasca {
 
     constructor(title, category, date, description, priority) {
         this._title;
