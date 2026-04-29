@@ -87,13 +87,13 @@ export default class Tasca {
 
 export class Category {
 
-    constructor(nom, color) {
-        this._nom = nom;
+    constructor(name, color) {
+        this._name = name;
         this._color = color;
     }
 
-    get nom() {
-        return this._nom;
+    get name() {
+        return this._name;
     }
 
     get color() {
@@ -101,6 +101,33 @@ export class Category {
     }
 
     printCategory() {
-        
+        //<div class="basic-category flex flex-sbetween flex-vcenter min-p">
+        //      <div class="flex flex-vcenter flex-sbetween">
+        //          <div class="category-color"></div>
+        //          <p>Estudis</p>
+        //      </div>
+        //      <button class="delete-button">Eliminar</button> 
+        //</div>
+
+        const base = document.createElement("div");
+        const divBase = document.createElement("div");
+        const dColor = document.createElement("div");
+        const pName = document.createElement("p");
+        const bDelete = document.createElement("button");
+
+        base.classList.add("basic-category", "flex", "flex-sbetween", "flex-vcenter", "min-p");
+        divBase.classList.add("flex", "flex-vcenter", "flex-sbetween");
+        dColor.classList.add("category-color");
+        bDelete.classList.add("delete-button");
+
+        pName.textContent = this._name;
+        bDelete.textContent = "Eliminar";
+
+        divBase.appendChild(dColor);
+        divBase.appendChild(pName);
+        base.appendChild(divBase);
+        base.appendChild(bDelete);
+
+        return base;
     }
 }
