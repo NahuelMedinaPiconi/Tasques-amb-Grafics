@@ -46,6 +46,12 @@ export default class Tasca {
         //     </div>
         //</div>
 
+        const backgroundColor = {
+            "Alta": #fecacb,
+            "Mediana" : #fdf08a,
+            "Baixa" : #bbf7d0
+        }[this._priority] || "#b6b6b6"
+
         const base = document.createElement("div");
         const divTop = document.createElement("div");
         const pTitle = document.createElement("p");
@@ -60,6 +66,9 @@ export default class Tasca {
         divTop.classList.add("flex", "flex-sbetween", "flex-vcenter");
         sCategory.classList.add("basic-radius");
         divBottom.classList.add("flex", "flex-sbetween", "flex-vcenter");
+
+        base.style.backgroundColor = backgroundColor;
+        sCategory.style.backgroundColor = this._category.color;
 
         pTitle.textContent = this._title;
         sPriority.textContent = this._priority;
@@ -119,6 +128,8 @@ export class Category {
         divBase.classList.add("flex", "flex-vcenter", "flex-sbetween");
         dColor.classList.add("category-color");
         bDelete.classList.add("delete-button");
+
+        dColor.style.backgroundColor = this._color;
 
         pName.textContent = this._name;
         bDelete.textContent = "Eliminar";
