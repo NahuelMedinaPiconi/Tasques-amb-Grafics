@@ -172,11 +172,17 @@ select {
     border-radius: 5px;
 }
 
+.task-list {
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
 .basic-task {
-    width: 45%;
+    width: 30%;
     font-size: 14px;
     padding-left: 1%;
     padding-right: 1%;
+    margin-bottom: 2%; 
     background-color: #2162ec;
 }
 
