@@ -1,8 +1,11 @@
 import { Category } from "./models.js";
 
-const categories = JSON.parse(localStorage.getItem("categories") || "[]");
+const categories = JSON.parse(localStorage.getItem("categories") || "[]")
+    .map(category => new Category(category.name, category.color));
 
 document.addEventListener("DOMContentLoaded", function() {
+
+    printCategories(categories);
 
     const submitCategory = document.getElementById("createCategory");
 
@@ -16,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
             categories.push(new Category(name.value, color.value));
             localStorage.setItem("categories", JSON.stringify(categories));
 
+            printCategoriest(categories);
             name.value = ""
             color.value = "#000000"
         } else {
@@ -23,6 +27,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
     })
+
+    function printCategories(categories) {
+
+        const base = document.getElementById("categoryList");
+
+        categories.forEach((category, index) => {
+            console.log(category)
+            base.appendChild(category.printCategory())
+        })
+    }
 
     function checkRepited(name, categories) {
         for (let i = 0; i < categories.length; i++) {
