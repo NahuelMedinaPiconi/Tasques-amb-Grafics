@@ -14,11 +14,11 @@ export function getMappedCategories() {
 }
 
 export function getMappedTasks() {
-    return JSON.parse(localStorage.getItem("categories"))
+    return JSON.parse(localStorage.getItem("tasks"))
         .map(task => new Tasca(task._title, task._category, task._date, task._description, task._priority, task._finished));
 }
 
-export function setTasks(tasks) {
+export function setTasks(tasks) {   
     localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
