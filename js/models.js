@@ -1,3 +1,5 @@
+import { getCategories, setCategories, getTasks, setTasks } from "./storage";
+
 export class Tasca {
 
     constructor(title, category, date, description, priority) {
@@ -91,12 +93,12 @@ export class Tasca {
         })
 
         divIcons.getElementById("delete").addEventListener("click", function() {
-            const tasks = JSON.parse(localStorage.getItem("tasks"));
+            const tasks = getTasks();
 
             for(let i = 0; i < tasks.length; i++) {
                 if (tasks[i]._title == this._title) {
                     tasks.splice(i, 1);
-                    localStorage.setItem("tasks", JSON.stringify(tasks));
+                    setTasks(tasks);
                     base.remove();
                     return;
                 }
@@ -162,13 +164,13 @@ export class Category {
         bDelete.addEventListener("click", function(event) {
             event.preventDefault();
             
-            const categories = JSON.parse(localStorage.getItem("categories"));
+            const categories = getCategories();
 
             for (let i = 0; i < categories.length; i++) {
                 if (categories[i]._name == name) {
                     categories.splice(i, 1);
                     base.remove();
-                    localStorage.setItem("categories", JSON.stringify(categories));
+                    setCategories(categories);
                     return;
                 }
             }

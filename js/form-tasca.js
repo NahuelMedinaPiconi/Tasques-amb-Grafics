@@ -1,4 +1,5 @@
 import {Tasca} from "./models.js";
+import { getTasks, setTasks } from "./storage.js";
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -13,12 +14,12 @@ document.addEventListener("DOMContentLoaded", function() {
         const category = document.getElementById("category");
         const priority = document.getElementById("priority");
 
-        const tasks = JSON.parse(localStorage.getItem("tasks") || "[]");
+        const tasks = getTasks();
 
         if (checkRepited(title, tasks)) {
             tasks.push(new Tasca(title.value, description.value ||null, date.value || null, category.value || null, priority.value || null));
-            localStorage.setItem("tasks", JSON.stringify(tasks));
-            
+            setTasks(tasks);
+
             title.value = "";
             description.value = "";
             date.value = "";

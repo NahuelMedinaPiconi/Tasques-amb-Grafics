@@ -1,4 +1,5 @@
 import { Category } from "./models.js";
+import { getMappedCategories } from "./storage.js";
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -12,8 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const name = document.getElementById("new_category");
         const color = document.getElementById("color");
 
-        const categories = JSON.parse(localStorage.getItem("categories") || "[]")
-            .map(category => new Category(category._name, category._color));
+        const categories = getMappedCategories();
     
         if (checkRepited(name, categories)) {
             categories.push(new Category(name.value, color.value));
@@ -31,8 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function printCategories(categories) {
 
         if (categories == null) {
-            categories = JSON.parse(localStorage.getItem("categories") || "[]")
-                .map(category => new Category(category._name, category._color));
+            categories = getMappedCategories();
         }
 
         const base = document.getElementById("categoryList");
