@@ -185,6 +185,7 @@ select {
     width: 64%;
     margin-top: 2%;
     padding: 2%;
+    display: none;
 }
 
 .basic-category {

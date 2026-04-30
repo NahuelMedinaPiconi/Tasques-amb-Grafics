@@ -42,6 +42,10 @@ document.addEventListener("DOMContentLoaded", function() {
         categories.forEach((category, index) => {
             base.appendChild(category.printCategory())
         })
+
+        if (base.innerHTML.trim()) {
+            base.style.display = "block";
+        }
     }
 
     function checkRepited(name, categories) {

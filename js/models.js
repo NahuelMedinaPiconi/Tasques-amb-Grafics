@@ -136,7 +136,6 @@ export class Category {
 
         const name = this._name;
         bDelete.addEventListener("click", function(event) {
-            event.preventDefault();
             
             const categories = JSON.parse(localStorage.getItem("categories"));
 
