@@ -180,6 +180,10 @@ select {
     background-color: #2162ec;
 }
 
+.finished {
+    opacity: 0.5;
+}
+
 .category-list {
     background-color: var(--secondary-background);
     width: 64%;

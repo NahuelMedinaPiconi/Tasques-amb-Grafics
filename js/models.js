@@ -83,6 +83,11 @@ export class Tasca {
         divIcons.getElementById("complete").addEventListener("click", function() {
             this._finished = !this._finished;
             base.classList.toggle("finished");
+            if (this._finished) {
+                pTitle.style.textDecoration = "line-through";
+            } else {
+                pTitle.style.textDecoration = "none";
+            }
         })
 
         divIcons.getElementById("delete").addEventListener("click", function() {
