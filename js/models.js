@@ -1,11 +1,11 @@
 export class Tasca {
 
     constructor(title, category, date, description, priority) {
-        this._title;
-        this._category;
-        this._date;
-        this._description;
-        this._priority;
+        this._title = title;
+        this._category = category;
+        this._date = date;
+        this._description = description;
+        this._priority = priority;
     }
 
     get title() {
@@ -47,9 +47,9 @@ export class Tasca {
         //</div>
 
         const backgroundColor = {
-            "Alta": #fecacb,
-            "Mediana" : #fdf08a,
-            "Baixa" : #bbf7d0
+            "Alta": "#fecacb",
+            "Mediana" : "#fdf08a",
+            "Baixa" : "#bbf7d0"
         }[this._priority] || "#b6b6b6"
 
         const base = document.createElement("div");
