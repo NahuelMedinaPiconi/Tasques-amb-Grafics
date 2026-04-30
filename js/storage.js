@@ -12,3 +12,11 @@ export function getMappedCategories() {
     return JSON.parse(localStorage.getItem("categories") || "[]")
         .map(category => new Category(category._name, category._color));
 }
+
+export function setTasks(tasks) {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+export function setCategories(categories) {
+    localStorage.setItem("categories", JSON.stringify(categories));
+}
