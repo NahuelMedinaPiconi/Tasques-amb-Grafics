@@ -134,6 +134,23 @@ export class Category {
         pName.textContent = this._name;
         bDelete.textContent = "Eliminar";
 
+        const name = this._name;
+        bDelete.addEventListener("click", function(event) {
+            event.preventDefault();
+            
+            const categories = JSON.parse(localStorage.getItem("categories"));
+
+            for (let i = 0; i < categories.length; i++) {
+                if (categories[i]._name == name) {
+                    categories.splice(i, 1);
+                    console.log(categories, i);
+                    base.remove();
+                    localStorage.setItem("categories", JSON.stringify(categories));
+                    return;
+                }
+            }
+        })
+
         divBase.appendChild(dColor);
         divBase.appendChild(pName);
         base.appendChild(divBase);

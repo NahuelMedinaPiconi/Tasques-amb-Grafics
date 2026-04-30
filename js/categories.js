@@ -1,7 +1,7 @@
 import { Category } from "./models.js";
 
 const categories = JSON.parse(localStorage.getItem("categories") || "[]")
-    .map(category => new Category(category.name, category.color));
+    .map(category => new Category(category._name, category._color));
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const base = document.getElementById("categoryList");
 
+        console.log(categories);
         categories.forEach((category, index) => {
-            console.log(category)
             base.appendChild(category.printCategory())
         })
     }

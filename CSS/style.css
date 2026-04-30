@@ -184,12 +184,12 @@ select {
     background-color: var(--secondary-background);
     width: 64%;
     margin-top: 2%;
-    gap: 2%;
     padding: 2%;
 }
 
 .basic-category {
     background-color: var(--background);
+    margin-top: 2%;
 }
 
 .category-color {
