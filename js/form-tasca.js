@@ -1,4 +1,4 @@
-import {Tasca, Category} from "./models.js";
+import {Tasca} from "./models.js";
 
 document.addEventListener("DOMContentLoaded", function() {
 
