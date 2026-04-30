@@ -96,11 +96,12 @@ export class Tasca {
             }
         })
 
+        const title = this._title;
         divIcons.querySelector("#delete").addEventListener("click", function() {
             const tasks = getTasks();
 
             for(let i = 0; i < tasks.length; i++) {
-                if (tasks[i]._title == this._title) {
+                if (tasks[i]._title == title) {
                     tasks.splice(i, 1);
                     setTasks(tasks);
                     base.remove();

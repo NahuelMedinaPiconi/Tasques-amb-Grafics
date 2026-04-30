@@ -8,8 +8,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const tasks = getMappedTasks();
 
-        console.log(tasks);
-
         const base = document.getElementById("taskList");
 
         base.innerHTML = "";
