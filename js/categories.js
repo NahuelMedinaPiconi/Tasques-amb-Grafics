@@ -1,11 +1,8 @@
 import { Category } from "./models.js";
 
-const categories = JSON.parse(localStorage.getItem("categories") || "[]")
-    .map(category => new Category(category._name, category._color));
-
 document.addEventListener("DOMContentLoaded", function() {
 
-    printCategories(categories);
+    printCategories(null);
 
     const submitCategory = document.getElementById("createCategory");
 
@@ -14,12 +11,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const name = document.getElementById("new_category");
         const color = document.getElementById("color");
+
+        const categories = JSON.parse(localStorage.getItem("categories") || "[]")
+            .map(category => new Category(category._name, category._color));
     
         if (checkRepited(name, categories)) {
             categories.push(new Category(name.value, color.value));
             localStorage.setItem("categories", JSON.stringify(categories));
 
-            printCategoriest(categories);
+            printCategories(categories);
             name.value = ""
             color.value = "#000000"
         } else {
@@ -30,9 +30,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function printCategories(categories) {
 
+        if (categories == null) {
+            categories = JSON.parse(localStorage.getItem("categories") || "[]")
+                .map(category => new Category(category._name, category._color));
+        }
+
         const base = document.getElementById("categoryList");
 
-        console.log(categories);
+        base.innerHTML = "";
+
         categories.forEach((category, index) => {
             base.appendChild(category.printCategory())
         })

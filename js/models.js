@@ -143,7 +143,6 @@ export class Category {
             for (let i = 0; i < categories.length; i++) {
                 if (categories[i]._name == name) {
                     categories.splice(i, 1);
-                    console.log(categories, i);
                     base.remove();
                     localStorage.setItem("categories", JSON.stringify(categories));
                     return;
