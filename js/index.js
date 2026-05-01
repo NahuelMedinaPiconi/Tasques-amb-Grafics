@@ -9,11 +9,16 @@ document.addEventListener("DOMContentLoaded", function() {
         const tasks = getMappedTasks();
 
         const base = document.getElementById("taskList");
+        const baseUnfinished = document.getElementById("unfinishedTasks");
 
         base.innerHTML = "";
 
         tasks.forEach((task, index) => {
-            base.appendChild(task.printTasca())
+            if (!task._finished) {
+                base.appendChild(task.printTasca());
+            } else {
+                baseUnfinished.appendChild(task.printTasca());
+            }
         })
     }
 })
