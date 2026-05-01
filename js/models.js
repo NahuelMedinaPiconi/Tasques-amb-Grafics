@@ -33,7 +33,7 @@ export class Tasca {
 
     printTasca() {
 
-        // <div class="basic-radius flex flex-column basic-task">
+        // <div class="basic-radius flex flex-column basic-task flex-sbetween">
         //      <div class="flex flex-sbetween flex-vcenter">
         //          <p>Title</p>
         //          <span>Prioriti</span>
@@ -121,12 +121,12 @@ export class Tasca {
         divTop.appendChild(pTitle);
         divTop.appendChild(sPriority);
 
-        divBottom.appendChild(pDescription);
+        divBottom.appendChild(pDate);
         divBottom.appendChild(divIcons);
 
         base.appendChild(divTop);
         base.appendChild(sCategory);
-        base.appendChild(pDate);
+        base.appendChild(pDescription);
         base.appendChild(divBottom);
 
         return base;
