@@ -31,6 +31,10 @@ export class Tasca {
         return this._priority;
     }
 
+    get finished() {
+        return this._finished;
+    }
+
     printTasca() {
 
         // <div class="basic-radius flex flex-column basic-task flex-sbetween">
@@ -122,13 +126,13 @@ export class Tasca {
         })
 
         //Canviam l'estat de la tasca en cas de que es pulsi el boto.
-        divIcons.querySelector("#complete").addEventListener("click", function() {
+        divIcons.querySelector("#complete").addEventListener("click", () => {
+            console.log(this._finished);
             this._finished = !this._finished;
+            console.log(this._finished);
             base.classList.toggle("finished");
 
             pTitle.style.textDecoration = base.classList.contains("finished") ? "line-through" : "none";
-
-            console.log(pTitle.style.textDecoration);
 
             const tasks = getTasks();
 
