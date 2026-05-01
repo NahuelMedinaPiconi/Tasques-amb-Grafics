@@ -65,16 +65,24 @@ export class Tasca {
         const pDescription = document.createElement("p");
         const divIcons = document.createElement("div");
 
-        base.classList.add("basic-radius", "flex", "flex-column", "basic-task");
+        base.classList.add("basic-radius", "flex", "flex-column", "basic-task", "flex-sbetween");
         divTop.classList.add("flex", "flex-sbetween", "flex-vcenter");
         sCategory.classList.add("basic-radius");
         divBottom.classList.add("flex", "flex-sbetween", "flex-vcenter");
 
         base.style.backgroundColor = backgroundColor;
-        if (this._category == null) {
-            sCategory.style.backgroundColor = "#d2d2d2"
-        } else {
-            sCategory.style.backgroundColor = this._category.color;
+
+        // Aconseguir el color de la categoria
+        if (this._category != null) {
+
+            const categories = getCategories();
+
+            for (let i = 0; i < categories.length; i++) {
+                if (this._category == categories[i]._name) {
+                    sCategory.style.backgroundColor = categories[i]._color
+                    break;
+                }
+            }
         }
 
         pTitle.textContent = this._title;

@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const tasks = getTasks();
 
         if (checkRepited(title, tasks)) {
-            tasks.push(new Tasca(title.value, description.value ||null, date.value || null, category.value || null, priority.value || null));
+            tasks.push(new Tasca(title.value, category.value || null, date.value || null, description.value ||null, priority.value || null));
             setTasks(tasks);
 
             title.value = "";
