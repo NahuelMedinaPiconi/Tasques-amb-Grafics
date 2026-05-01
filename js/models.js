@@ -77,11 +77,18 @@ export class Tasca {
 
             const categories = getCategories();
 
+            let found = false;
+
             for (let i = 0; i < categories.length; i++) {
                 if (this._category == categories[i]._name) {
                     sCategory.style.backgroundColor = categories[i]._color
+                    found = true;
                     break;
                 }
+            }
+
+            if (!found) {
+                this._category = null;
             }
         }
 
