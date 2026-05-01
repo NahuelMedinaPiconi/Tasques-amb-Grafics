@@ -1,7 +1,9 @@
 import {Tasca} from "./models.js";
-import { getTasks, setTasks } from "./storage.js";
+import { getTasks, setTasks, getCategories } from "./storage.js";
 
 document.addEventListener("DOMContentLoaded", function() {
+
+    loadCategories();
 
     const submitTask = document.getElementById("createTask");
 
@@ -36,5 +38,19 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
         return true;
+    }
+
+    function loadCategories() {
+        const categories = getCategories();
+
+        const base = document.getElementById("category");
+
+        categories.forEach((category, index) => {
+        const option = document.createElement("option");
+        option.value = option.textContent = category._name;
+
+        base.appendChild(option);
+
+        })
     }
 })
