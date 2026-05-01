@@ -41,7 +41,7 @@
                 <input class="basic-radius" id="title" type="text" max="20" name="title" required>
 
                 <label for="description">Descripció:</label>
-                <textarea class="basic-radius" id="description" name="description" type="text" max="400"></textarea>
+                <textarea class="basic-radius min-p" id="description" name="description" type="text" max="400"></textarea>
 
                 <label for="date">Data entrega:</label>
                 <input class="basic-radius" id="date" name="date" type="date">
@@ -51,10 +51,10 @@
 
                 <label for="priority">Prioritat:</label>
                 <select class="basic-radius long-select" id="priority" name="priority">
+                    <option>Sense prioritat</option>
                     <option value="Baixa">Baixa</option>
                     <option value="Mediana">Mediana</option>
                     <option value="Alta">Alta</option>
-                    <option>Sense prioritat</option>
                 </select>
 
                 <button type="submit" class="large-button">Crear Tasca</button>
