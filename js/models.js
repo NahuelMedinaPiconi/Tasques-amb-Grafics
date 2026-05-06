@@ -10,8 +10,6 @@ export class Tasca {
             Tasca.count++;
             localStorage.setItem("id_count", JSON.stringify(Tasca.count))
         }
-        console.log(Tasca.count);
-        console.log(id);
         this._id = id;
         this._title = title;
         this._category = category;
