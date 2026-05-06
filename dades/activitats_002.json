@@ -1,47 +1,47 @@
 [
   {
-    "id": "task-006",
-    "title": "Afegir importació amb fetch",
-    "description": "Carrega activitats externes sense duplicats.",
-    "date": "2025-04-22",
-    "category": { "nom": "Dades", "color": "#81ecec" },
-    "priority": "Mitjana",
-    "finished": false
+    "_id": "task-006",
+    "_title": "Afegir importació amb fetch",
+    "_description": "Carrega activitats externes sense duplicats.",
+    "_date": "2025-04-22",
+    "_category": { "nom": "Dades", "color": "#81ecec" },
+    "_priority": "Mitjana",
+    "_finished": false
   },
   {
-    "id": "task-007",
-    "title": "Gestió de categories a categories.html",
-    "description": "Permet afegir i eliminar categories.",
-    "date": "2025-04-24",
-    "category": { "nom": "Funcionalitat", "color": "#00cec9" },
-    "priority": "Mitjana",
-    "finished": false
+    "_id": "task-007",
+    "_title": "Gestió de categories a categories.html",
+    "_description": "Permet afegir i eliminar categories.",
+    "_date": "2025-04-24",
+    "_category": { "nom": "Funcionalitat", "color": "#00cec9" },
+    "_priority": "Mitjana",
+    "_finished": false
   },
   {
-    "id": "task-008",
-    "title": "Separa el projecte en mòduls JavaScript",
-    "description": "Distribueix la lògica en fitxers com storage.js, models.js...",
-    "date": "2025-04-26",
-    "category": { "nom": "Codi net", "color": "#55efc4" },
-    "priority": "Alta",
-    "finished": false
+    "_id": "task-008",
+    "_title": "Separa el projecte en mòduls JavaScript",
+    "_description": "Distribueix la lògica en fitxers com storage.js, models.js...",
+    "_date": "2025-04-26",
+    "_category": { "nom": "Codi net", "color": "#55efc4" },
+    "_priority": "Alta",
+    "_finished": false
   },
   {
-    "id": "task-009",
-    "title": "Aplica estils amb CSS",
-    "description": "Fes que la interfície sigui usable i atractiva.",
-    "date": "2025-04-28",
-    "category": { "nom": "Disseny", "color": "#e5989b" },
-    "priority": "Baixa",
-    "finished": false
+    "_id": "task-009",
+    "_title": "Aplica estils amb CSS",
+    "_description": "Fes que la interfície sigui usable i atractiva.",
+    "_date": "2025-04-28",
+    "_category": { "nom": "Disseny", "color": "#e5989b" },
+    "_priority": "Baixa",
+    "_finished": false
   },
   {
-    "id": "task-010",
-    "title": "Revisa, prova i entrega el projecte",
-    "description": "Assegura't que tot funciona i que el codi està ordenat.",
-    "date": "2025-04-30",
-    "category": { "nom": "Finalització", "color": "#636e72" },
-    "priority": "Alta",
-    "finished": false
+    "_id": "task-010",
+    "_title": "Revisa, prova i entrega el projecte",
+    "_description": "Assegura't que tot funciona i que el codi està ordenat.",
+    "_date": "2025-04-30",
+    "_category": { "nom": "Finalització", "color": "#636e72" },
+    "_priority": "Alta",
+    "_finished": false
   }
 ]

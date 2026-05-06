@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
         event.preventDefault();
 
         const file = document.getElementById("files").value;
-        if (!file == "") {
+        if (file != "") {
             fetch(`dades/${file}`)
             .then(response => response.json())
             .then(newTasks =>{
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function filterNewTasks(newTasks) {
         for (let i = 0; i < tasks.length; i++) {
             newTasks = newTasks.filter(task => {
-                task._title != tasks[i]._id
+                return task._title != tasks[i]._title
             });
         }
         newTasks.forEach(task => {
@@ -62,5 +62,4 @@ document.addEventListener("DOMContentLoaded", function() {
         tasks = getMappedTasks();
         printTasks();
     }
-
-})
+}) 
