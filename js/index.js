@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
         event.preventDefault();
 
         const file = document.getElementById("files").value;
+        tasks = getMappedTasks();
         if (file != "") {
             fetch(`dades/${file}`)
             .then(response => response.json())

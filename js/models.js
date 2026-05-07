@@ -123,9 +123,6 @@ export class Tasca {
         divIcons.querySelector(".delete").addEventListener("click", function() {
             const tasks = getTasks();
             for(let i = 0; i < tasks.length; i++) {
-                console.log(tasks[i]._id);
-                console.log(id);
-                console.log(tasks[i]._id == id);
                 if (tasks[i]._id == id) {
                     tasks.splice(i, 1);
                     setTasks(tasks);
