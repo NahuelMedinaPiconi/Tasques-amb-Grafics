@@ -4,7 +4,7 @@
     "_title": "Afegir importació amb fetch",
     "_description": "Carrega activitats externes sense duplicats.",
     "_date": "2025-04-22",
-    "_category": { "nom": "Dades", "color": "#81ecec" },
+    "_category": { "_name": "Dades", "_color": "#81ecec" },
     "_priority": "Mitjana",
     "_finished": false
   },
@@ -13,7 +13,7 @@
     "_title": "Gestió de categories a categories.html",
     "_description": "Permet afegir i eliminar categories.",
     "_date": "2025-04-24",
-    "_category": { "nom": "Funcionalitat", "color": "#00cec9" },
+    "_category": { "_name": "Funcionalitat", "_color": "#00cec9" },
     "_priority": "Mitjana",
     "_finished": false
   },
@@ -22,7 +22,7 @@
     "_title": "Separa el projecte en mòduls JavaScript",
     "_description": "Distribueix la lògica en fitxers com storage.js, models.js...",
     "_date": "2025-04-26",
-    "_category": { "nom": "Codi net", "color": "#55efc4" },
+    "_category": { "_name": "Codi net", "_color": "#55efc4" },
     "_priority": "Alta",
     "_finished": false
   },
@@ -31,7 +31,7 @@
     "_title": "Aplica estils amb CSS",
     "_description": "Fes que la interfície sigui usable i atractiva.",
     "_date": "2025-04-28",
-    "_category": { "nom": "Disseny", "color": "#e5989b" },
+    "_category": { "_name": "Disseny", "_color": "#e5989b" },
     "_priority": "Baixa",
     "_finished": false
   },
@@ -40,7 +40,7 @@
     "_title": "Revisa, prova i entrega el projecte",
     "_description": "Assegura't que tot funciona i que el codi està ordenat.",
     "_date": "2025-04-30",
-    "_category": { "nom": "Finalització", "color": "#636e72" },
+    "_category": { "_name": "Finalització", "_color": "#636e72" },
     "_priority": "Alta",
     "_finished": false
   }

@@ -4,7 +4,7 @@
     "_title": "Crea l'estructura de carpetes del projecte",
     "_description": "Organitza els fitxers: HTML, CSS, JS, dades...",
     "_date": "2025-04-15",
-    "_category": { "nom": "Organització", "color": "#f7df1e" },
+    "_category": { "_name": "Organització", "_color": "#f7df1e" },
     "_priority": "Alta",
     "_finished": false
   },
@@ -13,7 +13,7 @@
     "_title": "Dissenya la interfície d'index.html",
     "_description": "Mostra la llista de tasques i afegeix el contenidor del gràfic.",
     "_date": "2025-04-16",
-    "_category": { "nom": "Disseny", "color": "#e5989b" },
+    "_category": { "_name": "Disseny", "_color": "#e5989b" },
     "_priority": "Mitjana",
     "_finished": false
   },
@@ -22,7 +22,7 @@
     "_title": "Implementa el formulari a crear-tasca.html",
     "_description": "Inclou validació dels camps i guardat a localStorage.",
     "_date": "2025-04-17",
-    "_category": { "nom": "Formularis", "color": "#6c5ce7" },
+    "_category": { "_name": "Formularis", "_color": "#6c5ce7" },
     "_priority": "Alta",
     "_finished": false
   },
@@ -31,7 +31,7 @@
     "_title": "Permet marcar les tasques com a fetes",
     "_description": "Afegir checkbox a index.html i actualitzar l'estat.",
     "_date": "2025-04-18",
-    "_category": { "nom": "Funcionalitat", "color": "#00cec9" },
+    "_category": { "_name": "Funcionalitat", "_color": "#00cec9" },
     "_priority": "Alta",
     "_finished": false
   },
@@ -40,7 +40,7 @@
     "_title": "Crea el gràfic amb Chart.js",
     "_description": "Mostrar les tasques fetes per mes en format bar chart.",
     "_date": "2025-04-20",
-    "_category": { "nom": "Visualització", "color": "#fab1a0" },
+    "_category": { "_name": "Visualització", "_color": "#fab1a0" },
     "_priority": "Alta",
     "_finished": false
   }

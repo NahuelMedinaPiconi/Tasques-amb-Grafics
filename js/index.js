@@ -1,9 +1,8 @@
-import { getMappedTasks, setTasks } from "./storage.js";
+import { getMappedTasks, setTasks, getCategories, setCategories } from "./storage.js";
 
 let tasks = getMappedTasks();
 
 document.addEventListener("DOMContentLoaded", function() {
-
     printTasks();
 
     const loadTasks = document.getElementById("loadTasks");
@@ -56,10 +55,21 @@ document.addEventListener("DOMContentLoaded", function() {
                 return task._title != tasks[i]._title
             });
         }
+
+        let idCount = JSON.parse((localStorage.getItem("id_count")) || "0");
+        let categories = getCategories();
+
         newTasks.forEach(task => {
+            categories.push(task._category);
+            task._category = task._category._name;
+
+            task._id = idCount;
+            idCount++;
             tasks.push(task)
         })
+        localStorage.setItem("id_count", JSON.stringify(idCount));
         setTasks(tasks);
+        setCategories(categories);
         tasks = getMappedTasks();
         printTasks();
     }
