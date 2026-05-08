@@ -137,6 +137,11 @@ h1 + div {
     padding-right: 3%;
 }
 
+h2 {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
 button {
     background-color: var(--primary-blue);
     color: var(--secondary-text);
