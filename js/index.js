@@ -58,9 +58,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         let idCount = JSON.parse((localStorage.getItem("id_count")) || "0");
         let categories = getCategories();
-
+        console.log(categories);
         newTasks.forEach(task => {
-            categories.push(task._category);
+            if (checkRepited(task._category._name, categories)) {
+                categories.push(task._category);
+            }
             task._category = task._category._name;
 
             task._id = idCount;
@@ -72,5 +74,14 @@ document.addEventListener("DOMContentLoaded", function() {
         setCategories(categories);
         tasks = getMappedTasks();
         printTasks();
+    }
+
+    function checkRepited(name, categories) {
+        for (let i = 0; i < categories.length; i++) {
+            if (categories[i]._name == name) {
+                return false;
+            }
+        }
+        return true;
     }
 }) 
