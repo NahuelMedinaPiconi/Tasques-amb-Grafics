@@ -1,9 +1,11 @@
-import { getMappedTasks, setTasks, getCategories, setCategories } from "./storage.js";
+import { getMappedTasks, setTasks, getCategories, setCategories, getTasks } from "./storage.js";
+import * as chart from "https://cdn.jsdelivr.net/npm/chart.js";
 
 let tasks = getMappedTasks();
 
 document.addEventListener("DOMContentLoaded", function() {
     printTasks();
+    printGraph();
 
     const loadTasks = document.getElementById("loadTasks");
     
@@ -83,5 +85,31 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
         return true;
+    }
+
+    function printGraph(newTask) {
+        let tasksFinished = getFinishedTasksGraph();
+        const ctx = document.getElementById("graph");
+        tasksFinished[new Date().getMonth()]++;
+
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+            labels: ['Ener', 'Febrer', 'Març', 'Abril', 'Maig', 'Juni', "Juliol", "Agost", "Septembre", "Octubre", "Novembre", "Desembre"],
+            datasets: [{
+                label: 'Tasques realitzades',
+                data: [12, 19, 3, 5, 2, 3, 2, 4, 5, 6, 3, 1],
+                borderWidth: 1
+            }]
+            },
+            options: {
+            scales: {
+                y: {
+                beginAtZero: true
+                }
+            }
+            }
+        })
     }
 }) 

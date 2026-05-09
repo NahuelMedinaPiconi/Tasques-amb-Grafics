@@ -37,3 +37,11 @@ export function addCategory(category) {
     categories.push(category);
     setTasks(categories);
 }
+
+export function getFinishedTasksGraph() {
+    return JSON.parse(localStorage.getItem("tasks-finished")  || "[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]");
+}
+
+export function setFinishedTasksGraph(finishedTasks) {
+    localStorage.setItem("tasks-finished", JSON.stringify(finishedTasks));
+}

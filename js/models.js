@@ -1,4 +1,4 @@
-import { getCategories, setCategories, getTasks, setTasks } from "./storage.js";
+import { getCategories, setCategories, getTasks, setTasks, getFinishedTasksGraph, setFinishedTasksGraph } from "./storage.js";
 
 export class Tasca {
 
@@ -134,11 +134,16 @@ export class Tasca {
 
         //Canviam l'estat de la tasca en cas de que es pulsi el boto.
         divIcons.querySelector(".complete").addEventListener("click", () => {
+
+            let tasksFinished = getFinishedTasksGraph();
+
             this._finished = !this._finished;
             base.classList.toggle("finished");
-
             pTitle.style.textDecoration = base.classList.contains("finished") ? "line-through" : "none";
-
+            if (this._finished) {
+                tasksFinished[new Date().getMonth()]++;
+            } else {
+            }
             const tasks = getTasks();
 
             for (let i = 0; i < tasks.length; i++) {
