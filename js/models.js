@@ -62,9 +62,9 @@ export class Tasca {
         //</div>
 
         const backgroundColor = {
-            "Alta": "#fecacb",
-            "Mediana" : "#fdf08a",
-            "Baixa" : "#bbf7d0"
+            "Alta": "#ff989a",
+            "Mediana" : "#ffee6d",
+            "Baixa" : "#7effab"
         }[this._priority] || "#b6b6b6"
 
         const base = document.createElement("div");

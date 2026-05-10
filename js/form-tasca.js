@@ -1,11 +1,23 @@
 import {Tasca} from "./models.js";
-import { getTasks, setTasks, getCategories } from "./storage.js";
+import { getTasks, setTasks, getCategories, getThemeColor, toggleThemeColor } from "./storage.js";
 
 document.addEventListener("DOMContentLoaded", function() {
 
+    const body = document.body;
+    const submitTask = document.getElementById("createTask");
+
+    if (getThemeColor() == 1) {
+        body.classList.add("dark");
+        document.getElementById("toggle").classList.add("active");
+    }
+
     loadCategories();
 
-    const submitTask = document.getElementById("createTask");
+    document.getElementById("toggle").addEventListener("click", function() {
+        this.classList.toggle("active");
+        toggleThemeColor();
+        body.classList.toggle("dark");
+    });
 
     submitTask.addEventListener("submit", function(event) {
         event.preventDefault();

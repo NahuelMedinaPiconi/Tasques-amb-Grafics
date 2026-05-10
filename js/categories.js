@@ -1,11 +1,23 @@
 import { Category } from "./models.js";
-import { getMappedCategories } from "./storage.js";
+import { getMappedCategories, getThemeColor, toggleThemeColor } from "./storage.js";
 
 document.addEventListener("DOMContentLoaded", function() {
 
+    const body = document.body;
+
+    if (getThemeColor() == 1) {
+        body.classList.add("dark");
+        document.getElementById("toggle").classList.add("active");
+    }
     printCategories(null);
 
     const submitCategory = document.getElementById("createCategory");
+
+    document.getElementById("toggle").addEventListener("click", function() {
+        this.classList.toggle("active");
+        toggleThemeColor();
+        body.classList.toggle("dark");
+    });
 
     submitCategory.addEventListener("submit", function(event) {
         event.preventDefault();

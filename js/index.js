@@ -1,10 +1,18 @@
-import { getMappedTasks, setTasks, getCategories, setCategories, getTasks, getFinishedTasksGraph } from "./storage.js";
+import { getMappedTasks, setTasks, getCategories, setCategories, getTasks, getFinishedTasksGraph, toggleThemeColor, getThemeColor } from "./storage.js";
 import * as chart from "https://cdn.jsdelivr.net/npm/chart.js";
 
 let tasks = getMappedTasks();
 let actualChart = null;
 
 document.addEventListener("DOMContentLoaded", function() {
+
+    const body = document.body;
+
+    if (getThemeColor() == 1) {
+        body.classList.add("dark");
+        document.getElementById("toggle").classList.add("active");
+    }
+
     printTasks();
     printGraph();
 
@@ -15,6 +23,12 @@ document.addEventListener("DOMContentLoaded", function() {
             tasks = getMappedTasks();
             printTasks();
         }
+    });
+
+    document.getElementById("toggle").addEventListener("click", function() {
+        this.classList.toggle("active");
+        toggleThemeColor();
+        body.classList.toggle("dark");
     });
 
     loadTasks.addEventListener("submit", function(event) {
@@ -62,7 +76,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         let idCount = JSON.parse((localStorage.getItem("id_count")) || "0");
         let categories = getCategories();
-        console.log(categories);
         newTasks.forEach(task => {
             if (checkRepited(task._category._name, categories)) {
                 categories.push(task._category);

@@ -45,3 +45,11 @@ export function getFinishedTasksGraph() {
 export function setFinishedTasksGraph(finishedTasks) {
     localStorage.setItem("tasks-finished", JSON.stringify(finishedTasks));
 }
+
+export function getThemeColor() {
+    return JSON.parse(localStorage.getItem("theme") || "0");
+}
+
+export function toggleThemeColor() {
+    localStorage.setItem("theme", JSON.stringify(getThemeColor() == 0 ? 1 : 0));
+}
