@@ -1,4 +1,5 @@
 import { getMappedTasks, setTasks, getCategories, setCategories, getTasks, getFinishedTasksGraph, toggleThemeColor, getThemeColor } from "./storage.js";
+import { printGraph } from "./grafics.js";
 import * as chart from "https://cdn.jsdelivr.net/npm/chart.js";
 
 let tasks = getMappedTasks();
@@ -7,6 +8,7 @@ let actualChart = null;
 document.addEventListener("DOMContentLoaded", function() {
 
     const body = document.body;
+    const ctx = document.getElementById("graph").getContext("2d");
 
     if (getThemeColor() == 1) {
         body.classList.add("dark");
@@ -14,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     printTasks();
-    printGraph();
+    actualChart = printGraph(actualChart, ctx);
 
     const loadTasks = document.getElementById("loadTasks");
     
@@ -64,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 baseUnfinished.appendChild(task.printTasca());
             }
         })
-        printGraph();
+        actualChart = printGraph( actualChart, ctx);
     }
 
     function filterNewTasks(newTasks) {
@@ -100,37 +102,5 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
         return true;
-    }
-
-    function printGraph() {
-        
-        const finishedTasks = getFinishedTasksGraph();
-        const ctx = document.getElementById("graph");
-
-        if (actualChart != null) {
-            actualChart.destroy();
-        }
-        
-        actualChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-            labels: ['Ener', 'Febrer', 'Març', 'Abril', 'Maig', 'Juni', "Juliol", "Agost", "Septembre", "Octubre", "Novembre", "Desembre"],
-            datasets: [{
-                label: 'Tasques realitzades',
-                data: finishedTasks,
-                backgroundColor: finishedTasks.map((_, i) => 
-                    i === new Date().getMonth() ? '#3b82f6' : '#93c5fd'
-                ),
-                borderWidth: 1
-            }]
-            },
-            options: {
-            scales: {
-                y: {
-                beginAtZero: true
-                }
-            }
-            }
-        })
     }
 }) 
