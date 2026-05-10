@@ -44,6 +44,10 @@ body, html {
     flex-direction: column;
 }
 
+.disabled {
+    display: none;
+}
+
 
 aside {
     background-color: var(--primary-blue);
@@ -231,4 +235,130 @@ select {
 
 .min-p {
     padding: 1%;
+}
+
+@media (max-width: 1000px) {
+    aside {
+        width: 10vw;
+        min-width: unset;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    ul {
+        padding-left: 5%;
+    }
+
+    li a {
+        font-size: 12px;
+    }
+
+    h1 + div {
+        width: 95%;
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+        padding: 3%;
+    }
+
+    select {
+        width: 40vw;
+    }
+
+    .basic-task {
+        width: 45%;
+    }
+
+    form {
+        width: 80%;
+    }
+
+    .category-list {
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    aside {
+        display: none;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    main > div {
+        width: 100%;
+        padding: 2%;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-top: 4%;
+    }
+
+    h1 + div {
+        width: 95%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .basic-task {
+        width: 100%;
+    }
+
+    #createTask {
+        margin-bottom: 2%;
+    }
+
+    .task-list {
+        flex-direction: column;
+    }
+
+    select {
+        width: 70vw;
+        margin-right: 0;
+    }
+
+    .small_button {
+        width: auto;
+        padding: 2%;
+    }
+
+    .disabled {
+        display: block;
+    }
+
+    form {
+        width: 90%;
+        padding: 6%;
+    }
+
+    input {
+        height: 7vh;
+    }
+
+    .long-select {
+        height: 7vh;
+    }
+
+    .large-button {
+        height: 7vh;
+    }
+
+    button {
+        height: 5vh;
+        padding: 2%;
+    }
+
+    .category-list {
+        width: 90%;
+        margin-bottom: 3%;
+    }
+
+    #graph {
+        width: 100%;
+        height: auto;
+    }
 }
