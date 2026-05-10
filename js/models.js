@@ -136,14 +136,19 @@ export class Tasca {
         divIcons.querySelector(".complete").addEventListener("click", () => {
 
             let tasksFinished = getFinishedTasksGraph();
+            const month = new Date().getMonth();
 
             this._finished = !this._finished;
             base.classList.toggle("finished");
             pTitle.style.textDecoration = base.classList.contains("finished") ? "line-through" : "none";
+
             if (this._finished) {
-                tasksFinished[new Date().getMonth()]++;
+                tasksFinished[month]++;
             } else {
+                tasksFinished[month] = Math.max(0, tasksFinished[month] - 1);
             }
+
+            setFinishedTasksGraph(tasksFinished);
             const tasks = getTasks();
 
             for (let i = 0; i < tasks.length; i++) {

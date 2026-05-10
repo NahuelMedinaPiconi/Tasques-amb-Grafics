@@ -39,7 +39,7 @@ export function addCategory(category) {
 }
 
 export function getFinishedTasksGraph() {
-    return JSON.parse(localStorage.getItem("tasks-finished")  || "[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]");
+    return JSON.parse(localStorage.getItem("tasks-finished")  || JSON.stringify(new  Array(12).fill(0)));
 }
 
 export function setFinishedTasksGraph(finishedTasks) {
