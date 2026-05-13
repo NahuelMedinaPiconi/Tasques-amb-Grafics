@@ -63,7 +63,7 @@ export class Tasca {
 
         const backgroundColor = {
             "Alta": "#ff989a",
-            "Mediana" : "#ffee6d",
+            "Mitjana" : "#ffee6d",
             "Baixa" : "#7effab"
         }[this._priority] || "#b6b6b6"
 
