@@ -40,14 +40,22 @@ document.addEventListener("DOMContentLoaded", function() {
         tasks = getMappedTasks();
         if (file != "") {
             fetch(`dades/${file}`)
-            .then(response => response.json())
-            .then(newTasks =>{
-                filterNewTasks(newTasks);
+            .then(response => {
+
+                const type = response.headers.get("content-type") || "";
+
+                if (type && type.includes("application/json")) {
+                    return response.json() .then(newTasks => filterNewTasks(newTasks));
+                } else if (type && type.includes("application/xml") || type.includes("text/xml")) {
+                    return response.text() .then(newTasks => filterNewXMLTasks(newTasks))
+                } else {
+                    throw new Error("L'extensió de l'arxiu ha fallat.");
+                }
             })
             .catch(error => {
                 console.error(error)
                 alert("La carrega d'arxius ha fallat");
-                });
+            });
         }
     })
 
@@ -93,6 +101,28 @@ document.addEventListener("DOMContentLoaded", function() {
         setCategories(categories);
         tasks = getMappedTasks();
         printTasks();
+    }
+
+    function filterNewXMLTasks(xmlTasks) {
+        const tasks = new DOMParser().parseFromString(xmlTasks, "application/xml")
+
+        const parseError = xml.querySelector("parsererror");
+        if (parseError) throw new Error("El xml no es correcte");
+
+        const xmlTasks = [...xml.querySelectorAll("task")].map(task => ({
+        _id: task.getAttribute("id"),
+        _title: task.querySelector("title").textContent,
+        _description: task.querySelector("description").textContent,
+        _date: task.querySelector("date").textContent,
+        _priority: task.getAttribute("importance"),
+        _finished: task.getAttribute("is_done") === "true",
+        _category: {
+            _name: task.querySelector("category > name").textContent,
+            _color: task.querySelector("category > color").textContent,
+        }
+        }));
+
+        filterNewTasks(xmlTasks);
     }
 
     function checkRepited(name, categories) {
