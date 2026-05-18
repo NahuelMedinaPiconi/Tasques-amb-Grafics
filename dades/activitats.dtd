@@ -1,0 +1,23 @@
+<!-- Arrel -->
+<!ELEMENT tasks (task+)>
+<!ELEMENT task (title, description?, date?, category?)>
+<!ATTLIST task
+    id CDATA #REQUIRED
+>
+
+<!-- Elements simples -->
+
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ATTLIST task
+    importance (Alta | Mitjana | Baixa | Sense_Prioritat) "Sense Prioritat"
+>
+<!ATTLIST task
+    is_done (true | false) "false"
+>
+
+<!-- Jerarquia -->
+<!ELEMENT category (name, color)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT color (#PCDATA)>

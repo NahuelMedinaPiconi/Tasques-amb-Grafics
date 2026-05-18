@@ -1,0 +1,40 @@
+<?xml version = "1.0" encoding="UTF-8"?>
+<!DOCTYPE tasks SYSTEM "activitats.dtd">
+<tasks>
+    <task id="task_001" importance="Alta" is_done="false">
+        <title>Crear xml</title>
+        <description>Fer un xml per importar en js</description>
+        <date>2020-11-05</date>
+        <category>
+            <name>XML</name>
+            <color>#00cec9</color>
+        </category>
+    </task>
+    <task id="task_002" importance="Mitjana" is_done="false">
+        <title>DTD</title>
+        <description>Validar xml</description>
+        <date>2020-12-05</date>
+        <category>
+            <name>DTD</name>
+            <color>#00ce88</color>
+        </category>
+    </task>
+    <task id="task_003" importance="Baixa" is_done="false">
+        <title>JSON</title>
+        <description>Fer un arxiu json</description>
+        <date>2020-11-06</date>
+        <category>
+            <name>XML</name>
+            <color>#00cec9</color>
+        </category>
+    </task>
+    <task id="task_004" importance="Alta" is_done="false">
+        <title>Instalar Ubuntu</title>
+        <description>S'ha d'instal·lar ubuntu</description>
+        <date>2022-10-23</date>
+        <category>
+            <name>SO</name>
+            <color>#ffffff</color>
+        </category>
+    </task>
+</tasks>
