@@ -103,8 +103,8 @@ document.addEventListener("DOMContentLoaded", function() {
         printTasks();
     }
 
-    function filterNewXMLTasks(xmlTasks) {
-        const tasks = new DOMParser().parseFromString(xmlTasks, "application/xml")
+    function filterNewXMLTasks(xmlText) {
+        const xml = new DOMParser().parseFromString(xmlText, "application/xml")
 
         const parseError = xml.querySelector("parsererror");
         if (parseError) throw new Error("El xml no es correcte");
