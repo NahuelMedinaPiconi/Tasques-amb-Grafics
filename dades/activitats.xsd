@@ -19,6 +19,13 @@
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
+                        <xs:attribute name="id">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="task_[0-9]{3}"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
                         <xs:attribute name="importance">
                             <xs:simpleType>
                                 <xs:restriction base="xs:string">
@@ -29,7 +36,7 @@
                                 </xs:restriction>
                             </xs:simpleType>
                         </xs:attribute>
-                        <xs:attribute name="finished">
+                        <xs:attribute name="is_done">
                             <xs:simpleType>
                                 <xs:restriction base="xs:string">
                                     <xs:enumeration value="false"/>
